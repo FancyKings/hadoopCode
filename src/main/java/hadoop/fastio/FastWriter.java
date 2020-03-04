@@ -19,12 +19,17 @@ public class FastWriter implements Closeable {
 
     public void println(Object object) throws IOException {
         writer.write(object.toString());
-        writer.write("\n" );
+        writer.write("\n");
+        writer.flush();
+    }
+
+    public void flush() throws IOException {
         writer.flush();
     }
 
     @Override
     public void close() throws IOException {
+        writer.flush();
         writer.close();
     }
 }

@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Main-Class: hadoop.first.Read
+Class-Path: hadoop-mapreduce-client-jobclient-3.1.3.jar paranamer-2.3.ja
+ r commons-collections-3.2.2.jar commons-lang-2.6.jar jackson-xc-1.9.2.j
+ ar guava-27.0-jre.jar commons-io-2.5.jar json-smart-2.3.jar hadoop-comm
+ on-3.1.3.jar slf4j-log4j12-1.7.25.jar commons-codec-1.11.jar commons-ma
+ th3-3.1.1.jar error_prone_annotations-2.2.0.jar jetty-io-9.3.24.v201806
+ 05.jar kerby-asn1-1.0.1.jar kerb-client-1.0.1.jar kerby-config-1.0.1.ja
+ r curator-framework-2.13.0.jar jsr311-api-1.1.1.jar jackson-core-asl-1.
+ 9.2.jar okhttp-2.7.5.jar kerb-identity-1.0.1.jar jackson-core-2.7.8.jar
+  jersey-client-1.19.jar slf4j-api-1.7.25.jar kerb-util-1.0.1.jar hadoop
+ -client-3.1.3.jar commons-daemon-1.0.13.jar jackson-jaxrs-json-provider
+ -2.7.8.jar kerb-core-1.0.1.jar javax.servlet-api-3.1.0.jar kerby-util-1
+ .0.1.jar failureaccess-1.0.jar nimbus-jose-jwt-4.41.1.jar gson-2.2.4.ja
+ r jetty-util-9.3.24.v20180605.jar hadoop-yarn-client-3.1.3.jar accessor
+ s-smart-1.2.jar hadoop-yarn-common-3.1.3.jar commons-logging-1.2.jar ja
+ xb-api-2.2.11.jar listenablefuture-9999.0-empty-to-avoid-conflict-with-
+ guava.jar okio-1.6.0.jar woodstox-core-5.0.3.jar jetty-servlet-9.3.24.v
+ 20180605.jar kerby-pkix-1.0.1.jar checker-qual-2.5.2.jar commons-config
+ uration2-2.1.1.jar re2j-1.1.jar token-provider-1.0.1.jar commons-lang3-
+ 3.4.jar jetty-security-9.3.24.v20180605.jar jackson-jaxrs-1.9.2.jar com
+ mons-cli-1.2.jar hadoop-hdfs-3.1.3.jar avro-1.7.7.jar jline-0.9.94.jar 
+ jackson-annotations-2.7.0.jar audience-annotations-0.5.0.jar kerb-crypt
+ o-1.0.1.jar jersey-server-1.19.jar jcip-annotations-1.0-1.jar kerb-serv
+ er-1.0.1.jar kerb-admin-1.0.1.jar jersey-servlet-1.19.jar httpcore-4.4.
+ 4.jar zookeeper-3.4.13.jar hadoop-mapreduce-client-common-3.1.3.jar net
+ ty-all-4.0.52.Final.jar htrace-core4-4.1.0-incubating.jar jetty-http-9.
+ 3.24.v20180605.jar hadoop-auth-3.1.3.jar curator-client-2.13.0.jar http
+ client-4.5.2.jar commons-compress-1.18.jar hadoop-hdfs-client-3.1.3.jar
+  jsp-api-2.1.jar snappy-java-1.0.5.jar protobuf-java-2.5.0.jar jetty-xm
+ l-9.3.24.v20180605.jar kerby-xdr-1.0.1.jar jsr305-3.0.0.jar jackson-map
+ per-asl-1.9.2.jar commons-net-3.6.jar netty-3.10.5.Final.jar curator-re
+ cipes-2.13.0.jar jackson-jaxrs-base-2.7.8.jar jettison-1.1.jar animal-s
+ niffer-annotations-1.17.jar leveldbjni-all-1.8.jar jackson-module-jaxb-
+ annotations-2.7.8.jar j2objc-annotations-1.1.jar kerb-common-1.0.1.jar 
+ kerb-simplekdc-1.0.1.jar jersey-json-1.19.jar jaxb-impl-2.2.3-1.jar jer
+ sey-core-1.19.jar asm-5.0.4.jar jetty-webapp-9.3.24.v20180605.jar log4j
+ -1.2.17.jar jackson-databind-2.7.8.jar jetty-util-ajax-9.3.24.v20180605
+ .jar jsch-0.1.54.jar stax2-api-3.1.4.jar hadoop-yarn-api-3.1.3.jar jett
+ y-server-9.3.24.v20180605.jar hadoop-annotations-3.1.3.jar commons-bean
+ utils-1.9.3.jar hadoop-mapreduce-client-core-3.1.3.jar
+

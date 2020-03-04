@@ -13,7 +13,7 @@ public class FastReader implements Closeable {
 
     public FastReader(InputStream inputStream) {
         reader = new BufferedReader(new InputStreamReader(inputStream));
-        tokenizer = new StringTokenizer("" );
+        tokenizer = new StringTokenizer("");
     }
 
     private String innerNextLine() {
@@ -35,7 +35,7 @@ public class FastReader implements Closeable {
     }
 
     public String nextLine() {
-        tokenizer = new StringTokenizer("" );
+        tokenizer = new StringTokenizer("");
         return innerNextLine();
     }
 
