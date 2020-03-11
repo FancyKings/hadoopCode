@@ -25,7 +25,7 @@ public class Read {
         fastWriter.println("Please enter the name of the document you want to view:");
         String fileName = fastReader.nextLine();
 
-        if (Check.isExist(fileName.split(Config.splitChar))) {
+        if (!Check.isExist(fileName.split(Config.splitChar))) {
 
             fastWriter.println("The file name you entered does not exist.");
         } else {

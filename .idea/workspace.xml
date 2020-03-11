@@ -11,12 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8f05f2ba-9d71-44e3-bcc0-8b0381035259" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hadoop/first/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hadoop/first/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hadoop/first/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hadoop/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hadoop/first/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hadoop/first/Read.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hadoop/first/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hadoop/first/Write.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/hadoopCode.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/hadoopCode.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hadoop/second/Makedir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hadoop/second/Makedir.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="MarkdownNavigator.Settings.Preview" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -183,6 +180,12 @@
       <workItem from="1583372370402" duration="44938000" />
       <workItem from="1583455326171" duration="11921000" />
       <workItem from="1583592930689" duration="11840000" />
+      <workItem from="1583762868944" duration="199000" />
+      <workItem from="1583763339671" duration="9000" />
+      <workItem from="1583763374747" duration="42000" />
+      <workItem from="1583764010583" duration="499000" />
+      <workItem from="1583764688377" duration="148000" />
+      <workItem from="1583905531841" duration="1553000" />
     </task>
     <servers />
   </component>
@@ -260,10 +263,10 @@
     </state>
     <state width="1877" height="245" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583565802347" />
     <state width="881" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583299217881" />
-    <state x="616" y="157" width="1024" height="845" key="SettingsEditor" timestamp="1583654397386">
+    <state x="616" y="157" width="1024" height="845" key="SettingsEditor" timestamp="1583764804673">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="157" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1583654397386" />
+    <state x="616" y="157" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1583764804673" />
     <state x="615" y="193" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583292842011" />
     <state width="487" height="528" key="XDebugger.FullValuePopup" timestamp="1583327455562">
       <screen x="0" y="0" width="1920" height="1050" />

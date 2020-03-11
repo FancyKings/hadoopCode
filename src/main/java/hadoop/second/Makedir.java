@@ -31,8 +31,8 @@ public class Makedir {
         Path toCreate = new Path(uri);
 
         // Cannot create a directory because a file already exists in a layer
-        String[] levelDir = uri.split(Config.slashChars);
-        int createStatus = isConflict(levelDir);
+//        String[] levelDir = uri.split(Config.slashChars);
+//        int createStatus = isConflict(levelDir);
 
         fileSystem.mkdirs(toCreate);
 

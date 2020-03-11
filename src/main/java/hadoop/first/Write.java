@@ -41,7 +41,7 @@ public class Write {
         String[] checkList = fileName.split(Config.splitChar);
         fsDataOutputStream.flush();
         fsDataOutputStream.close();
-        if (Check.isExist(checkList)) {
+        if (!Check.isExist(checkList)) {
             fastWriter.println("Success.");
         } else {
             fastWriter.println("Failed.");
