@@ -1,6 +1,6 @@
 package hadoop.first;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 import org.apache.hadoop.fs.FSDataOutputStream;
@@ -16,8 +16,8 @@ import java.net.URISyntaxException;
  */
 public class Write {
 
-    static FastWriter fastWriter = Config.fastWriter;
-    static FastReader fastReader = Config.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
@@ -32,13 +32,13 @@ public class Write {
                 "===>\n" + typeIn + "\n<===\n"
                 + "and status is: ");
 
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         FSDataOutputStream fsDataOutputStream = fileSystem.create(
                 new Path(fileName)
         );
         fsDataOutputStream.write(typeInByte, 0, typeInByte.length);
 
-        String[] checkList = fileName.split(Config.splitChar);
+        String[] checkList = fileName.split(HadoopConfig.splitChar);
         fsDataOutputStream.flush();
         fsDataOutputStream.close();
         if (!Check.isExist(checkList)) {

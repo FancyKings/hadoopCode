@@ -1,6 +1,6 @@
 package hadoop.second;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 import org.apache.hadoop.fs.FileSystem;
@@ -14,8 +14,8 @@ import java.net.URISyntaxException;
  */
 public class Move {
 
-    static FastReader fastReader = Config.fastReader;
-    static FastWriter fastWriter = Config.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
@@ -29,7 +29,7 @@ public class Move {
 
     private static void mvFile(String[] args) throws InterruptedException, IOException, URISyntaxException {
 
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         fileSystem.rename(
                 new Path(args[0]),
                 new Path(args[1])
@@ -44,7 +44,7 @@ public class Move {
 
     private static boolean detectSrc(String src) throws InterruptedException, IOException, URISyntaxException {
 
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         return fileSystem.exists(new Path(src));
     }
 

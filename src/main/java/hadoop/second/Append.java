@@ -1,6 +1,6 @@
 package hadoop.second;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.config.RandomString;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
@@ -23,8 +23,8 @@ import java.net.URISyntaxException;
  */
 public class Append {
 
-    static FastWriter fastWriter = Config.fastWriter;
-    static FastReader fastReader = Config.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
@@ -36,7 +36,7 @@ public class Append {
 
     private static void tailAppend(String dir, String cont) throws InterruptedException, IOException, URISyntaxException {
 
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         // Detect HDFS configuration file APPEND settings
         boolean settingStatus = Boolean.getBoolean(
                 fileSystem.getConf().get("dfs.support.append")
@@ -48,7 +48,7 @@ public class Append {
             printWriter.flush();
             printWriter.close();
             fastWriter.println("Append Success");
-            Read.main(dir.split(Config.splitChar));
+            Read.main(dir.split(HadoopConfig.splitChar));
         } else {
 
             fastWriter.println("API is disabled, enable alternatives");
@@ -68,7 +68,7 @@ public class Append {
     private static boolean appendToTail(String dir, String cont) throws InterruptedException, IOException, URISyntaxException {
 
         String tmpString = RandomString.getString(10);
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         if (!fileSystem.exists(new Path(dir))) {
             return false;
         }

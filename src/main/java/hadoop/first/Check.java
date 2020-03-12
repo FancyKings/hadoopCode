@@ -1,6 +1,6 @@
 package hadoop.first;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 
@@ -12,8 +12,8 @@ import java.net.URISyntaxException;
  */
 public class Check {
 
-    static FastWriter fastWriter = Config.fastWriter;
-    static FastReader fastReader = Config.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
@@ -21,7 +21,7 @@ public class Check {
         if (args.length == 0) {
 
             fastWriter.println("Please enter the name of the file you want to retrieval:");
-            extraInput = fastReader.nextLine().split(Config.splitChar);
+            extraInput = fastReader.nextLine().split(HadoopConfig.splitChar);
         } else {
             extraInput = args;
         }

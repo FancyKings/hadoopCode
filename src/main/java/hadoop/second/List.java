@@ -1,6 +1,6 @@
 package hadoop.second;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 import org.apache.hadoop.fs.FileStatus;
@@ -18,8 +18,8 @@ import java.util.Locale;
  */
 public class List {
 
-    static FastReader fastReader = Config.fastReader;
-    static FastWriter fastWriter = Config.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
 
     private static int depth = 0;
     private static int maxDepth = Integer.MAX_VALUE;
@@ -38,7 +38,7 @@ public class List {
     private static void ls(String[] args) throws InterruptedException, IOException, URISyntaxException {
 
         String path = args[0];
-        FileStatus[] fileStatus = Config.getFileSystem().listStatus(
+        FileStatus[] fileStatus = HadoopConfig.getFileSystem().listStatus(
                 new Path(path)
         );
         for (FileStatus file : fileStatus) {
@@ -57,7 +57,7 @@ public class List {
                 String subPath = addSlash(path) + dirName;
                 fastWriter.println(getSpace() + dirName + '/');
                 depth += 2;
-                ls(subPath.split(Config.splitChar));
+                ls(subPath.split(HadoopConfig.splitChar));
                 depth -= 2;
                 ++dirCnt;
             }
@@ -74,7 +74,7 @@ public class List {
 
     public static String getName(String path, FileStatus tot) {
         return (tot.getPath().toString().
-                replaceAll(Config.hdfsPath + addSlash(path), ""));
+                replaceAll(HadoopConfig.hdfsPath + addSlash(path), ""));
     }
 
     private static String getOwner(FileStatus tot) {
@@ -98,8 +98,8 @@ public class List {
     }
 
     public static String addSlash(String ori) {
-        return (ori.charAt(ori.length() - 1) == Config.slashChar)
-                ? (ori) : (ori + Config.slashChar);
+        return (ori.charAt(ori.length() - 1) == HadoopConfig.slashChar)
+                ? (ori) : (ori + HadoopConfig.slashChar);
     }
 
     private static String getSpace() {
@@ -129,7 +129,7 @@ public class List {
 
         if (args.length == 0) {
             fastWriter.println("input:");
-            return fastReader.nextLine().split(Config.splitChar);
+            return fastReader.nextLine().split(HadoopConfig.splitChar);
         } else {
             return args;
         }

@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 /**
  * @author FancyKing
  */
-public class Config {
+public class HadoopConfig {
     public static String hdfsPath = "hdfs://SSHTunnel:9000";
     public static String hdfsUser = "hadoop511";
     public static Configuration configuration = new Configuration();
@@ -25,7 +25,7 @@ public class Config {
     static {
         configuration.set(
                 "fs.defaultFS",
-                Config.hdfsPath
+                HadoopConfig.hdfsPath
         );
         configuration.set(
                 "fs.hdfs.impl",
@@ -43,13 +43,17 @@ public class Config {
                 "dfs.support.append",
                 "true"
         );
+        configuration.set(
+                "hbase.zookeeper.quorum",
+                "SSHTunnel:2181"
+        );
     }
 
     public static FileSystem getFileSystem() throws URISyntaxException, IOException, InterruptedException {
         return FileSystem.get(
-                new URI(Config.hdfsPath),
-                Config.configuration,
-                Config.hdfsUser
+                new URI(HadoopConfig.hdfsPath),
+                HadoopConfig.configuration,
+                HadoopConfig.hdfsUser
         );
     }
 

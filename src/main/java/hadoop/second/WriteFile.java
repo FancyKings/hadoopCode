@@ -1,6 +1,6 @@
 package hadoop.second;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 import org.apache.hadoop.fs.FSDataOutputStream;
@@ -15,8 +15,8 @@ import java.net.URISyntaxException;
  */
 public class WriteFile {
 
-    static FastWriter fastWriter = Config.fastWriter;
-    static FastReader fastReader = Config.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
@@ -37,7 +37,7 @@ public class WriteFile {
 
     private static void writeToPath(String fileUri, Path path, String text) throws InterruptedException, IOException, URISyntaxException {
 
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         FSDataOutputStream fsDataOutputStream = fileSystem.create(path);
         byte[] typeInByte = text.getBytes();
         fastWriter.print("You are writing below data to file ["
@@ -58,7 +58,7 @@ public class WriteFile {
 
     private static int checkExistAndRewrite(Path path) throws IOException, URISyntaxException, InterruptedException {
 
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
         if (fileSystem.exists(path)) {
             fastWriter.println("File already exists, discard old content and rewrite?[y/n]");
             // cat file some line

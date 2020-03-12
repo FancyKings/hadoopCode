@@ -1,6 +1,6 @@
 package hadoop.second;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 import org.apache.hadoop.fs.FileStatus;
@@ -15,8 +15,8 @@ import java.net.URISyntaxException;
  */
 public class Remove {
 
-    static FastReader fastReader = Config.fastReader;
-    static FastWriter fastWriter = Config.fastWriter;
+    static FastReader fastReader = HadoopConfig.fastReader;
+    static FastWriter fastWriter = HadoopConfig.fastWriter;
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
@@ -37,7 +37,7 @@ public class Remove {
     private static int remove(String file) throws InterruptedException, IOException, URISyntaxException {
 
         Path path = new Path(file);
-        FileSystem fileSystem = Config.getFileSystem();
+        FileSystem fileSystem = HadoopConfig.getFileSystem();
 
         if (!fileSystem.exists(path)) {
             return -1;
@@ -91,7 +91,7 @@ public class Remove {
 
         if (args.length == 0) {
             fastWriter.println("input:");
-            return fastReader.nextLine().split(Config.splitChar);
+            return fastReader.nextLine().split(HadoopConfig.splitChar);
         } else {
             return args;
         }

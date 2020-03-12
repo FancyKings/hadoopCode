@@ -1,6 +1,6 @@
 package hadoop.first;
 
-import hadoop.config.Config;
+import hadoop.config.HadoopConfig;
 import hadoop.fastio.FastReader;
 import hadoop.fastio.FastWriter;
 import org.apache.hadoop.fs.FSDataInputStream;
@@ -19,18 +19,18 @@ public class Read {
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
-        FastReader fastReader = Config.fastReader;
-        FastWriter fastWriter = Config.fastWriter;
+        FastReader fastReader = HadoopConfig.fastReader;
+        FastWriter fastWriter = HadoopConfig.fastWriter;
 
         fastWriter.println("Please enter the name of the document you want to view:");
         String fileName = fastReader.nextLine();
 
-        if (!Check.isExist(fileName.split(Config.splitChar))) {
+        if (!Check.isExist(fileName.split(HadoopConfig.splitChar))) {
 
             fastWriter.println("The file name you entered does not exist.");
         } else {
 
-            FileSystem fileSystem = Config.getFileSystem();
+            FileSystem fileSystem = HadoopConfig.getFileSystem();
             FSDataInputStream fsDataInputStream = fileSystem.open(
                     new Path(fileName)
             );
