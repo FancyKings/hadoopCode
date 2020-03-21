@@ -13,7 +13,7 @@ import java.net.URISyntaxException;
  * @author FancyKing
  */
 public class HadoopConfig {
-    public static String hdfsPath = "hdfs://SSHTunnel:9000";
+    public static String hdfsPath = "hdfs://SSHTunnel:9000/hadoop511/";
     public static String hdfsUser = "hadoop511";
     public static Configuration configuration = new Configuration();
     public static String splitChar = ",";
